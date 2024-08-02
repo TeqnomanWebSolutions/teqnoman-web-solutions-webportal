@@ -1,0 +1,127 @@
+.eventCard {
+    padding: 15px;
+    border: 1px solid #E2EAF2;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 30px;
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 20px 70px 0px #2E3F6A1A;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        .title {
+            display: flex;
+            align-items: center;
+            line-height: normal;
+
+            img {
+                margin-right: 15px;
+            }
+
+            h2 {
+                color: #15141A;
+                font-family: "Inter";
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 0;
+                text-transform: capitalize;
+            }
+        }
+
+        .time {
+            display: none;
+            align-items: center;
+
+            &.show {
+                display: flex;
+            }
+
+            img {
+                margin-right: 5px;
+            }
+
+            p {
+                color: #15141A;
+                text-align: right;
+                font-family: "Roboto";
+                font-size: 12px;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .eventDate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            color: #15141A;
+            font-family: "Inter";
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .eventMember {
+            display: flex;
+            align-items: center;
+
+            .more,
+            .member {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                margin-left: -10px;
+                object-fit: cover;
+            }
+
+            .more {
+                background: #E2E2E2;
+                height: 34px;
+                width: 34px;
+                margin-bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .eventCard {
+        display: block;
+        height: auto;
+        margin-top: 0;
+
+        .eventDate {
+            flex-direction: column;
+            align-items: initial;
+            gap: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .eventCard {
+        .eventDate {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+}

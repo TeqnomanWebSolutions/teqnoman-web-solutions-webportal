@@ -1,0 +1,156 @@
+.card {
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0px 20px 70px rgba(46.48, 63.43, 106.25, 0.10);
+  border-radius: 8px;
+  cursor: pointer;
+
+  span {
+    display: block;
+  }
+
+  .project,
+  .employee,
+  .inquiries,
+  .blogs,
+  .career,
+  .jobs {
+    img {
+
+      border-radius: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .project img {
+    box-shadow: 0px 12px 30px rgba(255, 153, 0, 0.40)
+  }
+
+  .employee img {
+    box-shadow: 0px 12px 30px rgba(209.31, 42.39, 40.12, 0.44);
+  }
+
+  .inquiries img {
+    box-shadow: 0px 12px 30px rgba(98, 182, 85, 0.40);
+  }
+
+  .blogs img {
+    box-shadow: 0px 12px 30px rgba(32, 124, 254, 0.40);
+  }
+
+  .career img {
+    box-shadow: 0px 12px 30px rgba(63.08, 32, 254, 0.40);
+  }
+
+  .jobs img {
+    box-shadow: 0px 12px 30px 0px #FE20B366;
+
+  }
+
+  .name {
+    color: #15141A;
+    font-size: 16px;
+    font-family: "Inter";
+    font-weight: 400;
+    margin-bottom: 20px;
+
+  }
+
+  .amount {
+    color: #15141A;
+    font-size: 26px;
+    font-family: "Poppins";
+    font-weight: 600;
+    line-height: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .card {
+    padding: 20px;
+
+    .project,
+    .employee,
+    .inquiries,
+    .blogs,
+    .career,
+    .jobs {
+      img {
+        width: 2.9166666666666665vw;
+        height: auto;
+        border-radius: 100%;
+        margin-bottom: 1.0416666666666667vw;
+      }
+    }
+
+
+    .name {
+      font-size: 0.9722222222222222vw;
+      margin-bottom: 1.089vw;
+    }
+
+    .amount {
+      font-size: 1.5277777777777777vw;
+      line-height: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+  .card {
+    width: calc(33% - 20px);
+    max-width: 100%;
+    height: 170px;
+
+    .amount {
+      font-size: 22px;
+    }
+
+    .career img,
+    .employee img,
+    .project img,
+    .inquiries img,
+    .blogs img,
+    .jobs img {
+      height: 40px;
+      width: 40px;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 14px; 
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+  .card {
+    width: calc(50% - 20px);
+    max-width: 100%;
+    padding: 12px; 
+    height: 135px;
+
+    .name {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .amount {
+      font-size: 18px;
+    }
+
+    .career img,
+    .employee img,
+    .project img,
+    .inquiries img,
+    .blogs img,
+    .jobs img {
+      height: 36px;
+      width: 36px;
+      margin-bottom: 15px;
+    }
+  }
+}

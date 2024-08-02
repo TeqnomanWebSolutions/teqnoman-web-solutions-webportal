@@ -1,0 +1,236 @@
+@mixin flex-center($align: center, $justify: space-between) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.tableheading {
+    @include flex-center(center, space-between);
+    margin-bottom: 12px;
+
+    p {
+        color: #15141A;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .viewall {
+        background: linear-gradient(138deg, #FF922D 0%, #FF622D 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.workingDays {
+
+    .workingBox {
+        @include flex-center(center, space-between);
+        padding: 20px;
+        max-height: 256px;
+        flex-direction: column;
+        border-radius: 8px;
+        border: 1px solid #E2EAF2;
+
+        .month {
+            @include flex-center(center, space-between);
+            width: 100%;
+            margin-bottom: 30px;
+
+            .monthName {
+                color: #1F1F1F;
+                font-family: "Poppins";
+                font-size: 16px;
+                font-weight: 500;
+                line-height: normal;
+                margin: 0;
+            }
+
+            .changebtns {
+                @include flex-center(center, space-between);
+                gap: 20px;
+
+                .btn {
+                    @include flex-center(center, center);
+                    height: 30px;
+                    width: 30px;
+                    background-color: #F2F4F5;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    img {
+                        width: 20%;
+                        height: auto;
+                    }
+
+                    &:hover {
+                        background-color: #000000;
+
+                        img {
+                            filter: invert(1)
+                        }
+                    }
+                }
+            }
+        }
+
+        .daysRow {
+            @include flex-center(start, space-between);
+            gap: 20px;
+
+            .days {
+                .dayBox {
+                    font-family: 'Roboto';
+                    font-weight: 500;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 13px 20px;
+                    margin-bottom: 10px;
+                    border-radius: 8px;
+                    border: 0.50px #E2EAF2 solid;
+                    color: #1F1F1F;
+
+                }
+
+                .totalDays {
+                    font-family: "Inter";
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 15px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+    .workingDays {
+        .workingBox {
+            padding: 30px 15px 30px;
+
+            .month {
+                margin-bottom: 20px;
+            }
+
+            .daysRow {
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+
+                .days {
+                    .dayBox {
+                        padding: 15px;
+                        width: 70px;
+                    }
+
+                    .totalDays {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .workingDays {
+        .workingBox {
+            padding: 25px 10px 25px;
+            min-height: 200px;
+
+            .month {
+                margin-bottom: 20px;
+            }
+
+            .daysRow {
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+                width: 100%;
+
+                .days {
+                    .dayBox {
+                        padding: 10px;
+                        width: 61px;
+                        font-size: 18px;
+                    }
+
+                    .totalDays {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .workingDays {
+        .workingBox {
+            padding: 30px 15px 25px;
+            max-height: 200px;
+
+            .month {
+                margin-bottom: 20px;
+            }
+
+            .daysRow {
+                width: 100%;
+
+                .days {
+                    width: 100%;
+
+                    .dayBox {
+                        padding: 12px;
+                        font-size: 16px;
+                    }
+
+                    .totalDays {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .workingDays {
+        .workingBox {
+            padding: 20px;
+            max-height: 100%;
+
+            .monthName {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .daysRow {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 10%;
+                justify-content: space-evenly;
+                width: 100%;
+
+                .days {
+                    margin-bottom: 10px;
+                    width: 100%;
+
+                    .dayBox {
+                        padding: 11px;
+                    }
+
+                    .totalDays {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

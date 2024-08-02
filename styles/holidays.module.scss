@@ -1,0 +1,25 @@
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+.remove {
+    margin-bottom: 20px;
+}
+
+.action {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .delete,
+    .edit {
+        cursor: pointer;
+    }
+}

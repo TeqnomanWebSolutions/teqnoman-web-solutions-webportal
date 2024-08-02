@@ -1,0 +1,84 @@
+.tabContent {
+    border: 1px solid #E2EAF2;
+    border-radius: 8px;
+    border: 1px solid #E2EAF2;
+    padding: 20px;
+
+    .rowAdjust {
+        margin: 0 auto;
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        h5 {
+            color: #15141A;
+            font-family: "Inter";
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .AddMember {
+            color: #15141A;
+            font-family: "Inter";
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: right;
+        }
+    }
+
+    .tabInfo {
+        border-radius: 8px;
+        border: 1px solid #E2EAF2;
+        padding: 20px;
+    }
+}
+
+.employeeList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #E3ECF6;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .empName {
+        color: #15141A;
+        font-family: "Inter";
+        font-size: 12px;
+        font-weight: 500;
+        // width: 50%;
+
+    }
+
+    .profileImg {
+        margin-right: 10px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .designation {
+        text-align: right;
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .tabContent {
+        margin-top: 20px;
+    }
+
+    .employeeList {
+        gap: 20px;
+    }
+}

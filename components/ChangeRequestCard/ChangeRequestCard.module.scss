@@ -1,0 +1,48 @@
+.requestCard {
+    padding: 15px;
+    border: 1px solid #E2EAF2;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    position: relative;
+    margin-top: 30px;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 20px 70px 0px #2E3F6A1A;
+        border: 1px solid transparent;
+    }
+
+    .fieldInputs {
+        display: flex;
+        column-gap: 40px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+
+        .field {
+            cursor: pointer;
+        }
+
+        .profile {
+            cursor: pointer;
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .label {
+            color: #646464;
+            font-size: 12px;
+            font-family: "Inter";
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .input {
+            color: #000;
+            font-size: 14px;
+            font-family: "Inter";
+            font-weight: 400;
+        }
+    }
+}

@@ -1,0 +1,257 @@
+.projectHead {
+    font-size: 16px;
+    font-weight: 500;
+    color: #869098;
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+
+
+    .arrow {
+        margin: 0 10px;
+    }
+
+    span {
+        color: #15141A;
+        font-family: 'Poppins';
+        font-weight: 500;
+    }
+}
+
+.nomembers {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: -10px;
+    font-family: "Inter";
+}
+
+.detailPage {
+    background-color: #fff;
+    border: 1px solid #E2EAF2;
+    border-radius: 8px;
+    padding: 20px;
+
+    .projectDetail {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .projectName {
+
+            .name {
+                color: #15141A;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .department {
+                color: #869098;
+                font-size: 12px;
+                font-weight: 500;
+                font-family: 'Inter';
+            }
+        }
+
+        .status {
+            .badge {
+                color: #5AAF05;
+                background: rgba(90, 175, 5, 0.1);
+                font-size: 10px;
+                font-weight: 600;
+                font-family: Inter;
+                padding: 10px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .projectDuration {
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
+        justify-content: space-between;
+
+        .DateRange {
+            .title {
+                font-size: 12px;
+                font-weight: 500;
+                color: #869098;
+                font-family: 'Inter';
+            }
+
+            .Date {
+                font-size: 14px;
+                font-weight: 500;
+                font-family: 'Inter';
+            }
+        }
+
+        .totalMember {
+            font-size: 12px;
+            font-weight: 500;
+            font-family: Inter;
+            color: #869098;
+        }
+
+        .projectmember {
+            display: flex;
+            justify-content: center;
+
+
+            .member {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                margin-left: -15px;
+                object-fit: cover;
+            }
+
+            .more {
+                background: #E2E2E2;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                height: 34px;
+                color: #15141A;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 500;
+                margin-bottom: 0;
+                display: flex;
+                align-items: center;
+                margin-left: -15px;
+                justify-content: center;
+                width: 34px;
+            }
+        }
+
+
+    }
+
+    .heading {
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 500;
+        color: #869098;
+        margin-top: 20px;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 500;
+        font-family: 'Inter';
+    }
+
+    .attchamentHeading {
+        font-size: 12px;
+        font-weight: 500;
+        color: #869098;
+        font-family: Inter;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .fileDownload {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .flexFile {
+            display: flex;
+        }
+
+        .file {
+            background-color: transparent;
+            border: 1px solid #E2EAF2;
+            border-radius: 10px;
+            padding: 20px 100px 20px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Inter';
+            transition: 0.3s all;
+            position: relative;
+            display: flex;
+            gap: 10px;
+            color: black;
+            word-wrap: anywhere;
+
+            .icon {
+                margin-right: 10px;
+            }
+
+            .icon1 {
+                position: absolute;
+                right: 20px;
+            }
+        }
+    }
+
+    .description {
+        img {
+            width: auto;
+            max-width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 500;
+            font-family: 'Inter';
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .projectHead {
+        font-size: 14px;
+    }
+
+    .detailPage {
+        .projectDetail {
+            margin-bottom: 20px;
+            row-gap: 10px;
+
+            .projectName {
+                .name {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .projectDuration {
+            width: 100%;
+
+            .DateRange {
+                .Date {
+                    font-size: 12px;
+                }
+            }
+
+            .projectmember {
+                justify-content: right;
+
+                .member,
+                .more {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        .desc {
+            line-height: 1.7;
+        }
+
+        .attchamentHeading {
+            margin-top: 20px;
+        }
+
+        .fileDownload {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
+    }
+}

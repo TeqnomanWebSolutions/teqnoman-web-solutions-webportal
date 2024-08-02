@@ -1,0 +1,72 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.projectBox {
+    border: 1px solid #E2EAF2;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .btn {
+        background: #15141A;
+        color: #E2EAF2;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-weight: 700;
+        width: fit-content;
+        border: 1px solid transparent;
+        transition: all 0.3s ease-in-out;
+
+        &.draft {
+            background: #15141A;
+            color: white;
+
+            &:hover {
+                background: white;
+                color: #15141A;
+                border: 1px solid #15141A;
+            }
+        }
+
+        &.published {
+            background: #ff5900;
+            color: white;
+            border: 1px solid transparent;
+
+            &:hover {
+                background: white;
+                color: #ff5900;
+                border: 1px solid #ff5900;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .action {
+        gap: 12px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .action {
+        gap: 10px;
+    }
+}

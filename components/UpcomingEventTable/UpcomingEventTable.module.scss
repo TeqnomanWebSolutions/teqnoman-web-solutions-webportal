@@ -1,0 +1,70 @@
+.monthtable {
+    max-height: 228px;
+    overflow: auto;
+}
+
+.eventTable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.event {
+    position: relative;
+    padding-left: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 46px;
+        background: #1F1F1F;
+        border-radius: 10px;
+        left: 0;
+    }
+}
+
+.eventDiv {
+    display: flex;
+    gap: 10px;
+    color: #1F1F1F;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .eventName {
+        font-family: 'Roboto';
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.eventDay {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.eventTime {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .eventTable {
+        padding: 15px;
+    }
+
+    .eventDiv {
+        flex-wrap: wrap;
+    }
+}

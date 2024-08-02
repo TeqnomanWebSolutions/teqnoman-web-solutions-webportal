@@ -1,0 +1,135 @@
+@mixin flex-center($align: center, $justify: space-between) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+
+.card {
+    @include flex-center;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 20px 70px 0px #2E3F6A1A;
+    border-radius: 8px;
+
+
+    .project,
+    .leaves,
+    .employee {
+        img {
+            height: auto;
+            width: auto;
+            border-radius: 100%;
+        }
+    }
+
+    .yellowCard {
+        box-shadow: 0px 12px 30px rgba(255, 153, 0, 0.30);
+    }
+
+    .redCard {
+        box-shadow: 0px 12px 30px rgba(209, 42, 40, 0.34);
+    }
+
+    .greenCard {
+        box-shadow: 0px 12px 30px rgba(98, 182, 85, 0.34);
+    }
+
+    .name {
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        margin-left: 20px;
+    }
+
+    .amount {
+        font-family: "Poppins";
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 39px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .card {
+        padding: 14px;
+
+        .name {
+            margin-left: 5px;
+            font-size: 15px;
+        }
+
+        .amount {
+            font-size: 22px;
+        }
+
+        .project,
+        .leaves,
+        .employee {
+            img {
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .workingBox {
+        .daysRow {
+            width: 100%;
+        }
+    }
+
+    .card {
+        max-width: 300px;
+
+        .project,
+        .leaves,
+        .employee {
+            img {
+                height: 35px;
+                width: 35px;
+                border-radius: 100%;
+            }
+        }
+
+        .name {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .amount {
+            font-size: 22px;
+            line-height: 39px;
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .card {
+        padding: 16px 10px;
+        flex-wrap: wrap;
+
+        .project,
+        .leaves,
+        .employee {
+            img {
+                height: 35px;
+                width: 35px;
+                border-radius: 100%;
+            }
+        }
+
+        .name {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .amount {
+            font-size: 18px;
+            line-height: 39px;
+        }
+    }
+}

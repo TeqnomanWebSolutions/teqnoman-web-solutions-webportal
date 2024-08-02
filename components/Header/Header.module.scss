@@ -1,0 +1,319 @@
+.notificationDropdown::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+    display: none;
+}
+
+.notificationDropdown::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.notificationDropdown::-moz-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.notificationDropdown::-moz-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.notificationDropdown {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.notiList {
+    .iconflex {
+        transition: all 0.3s ease-in-out;
+        padding: 15px 15px;
+        gap: 15px;
+        cursor: pointer;
+        border-bottom: 1px solid #E7E7E7;
+        display: flex;
+        align-items: start;
+
+        &:hover {
+            background-color: #1F1F1F;
+            color: white;
+        }
+
+        .msgbox {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            font-family: "Inter";
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 17px;
+
+            .msgLine {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 11px;
+
+
+                .dot {
+                    height: 6px;
+                    width: 6px;
+                    background: #0F5CFF;
+                    border-radius: 50%;
+
+                }
+            }
+
+            .day {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                p {
+                    color: #A3A3A3;
+                }
+            }
+        }
+    }
+
+    a {
+        color: #000000;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+}
+
+.welcome {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.header {
+    padding: 20px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+
+    .iconDiv {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .settingIcon {
+            margin: 0 30px;
+        }
+    }
+
+    .notify {
+        position: relative;
+        cursor: pointer;
+
+        .notificationDropdown {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            cursor: default;
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            width: 400px;
+            background-color: white;
+            box-shadow: 0px 14px 44px 0px #0000000D;
+            border-radius: 10px;
+            border: 0.50px #E7E7E7 solid;
+            z-index: 2;
+            max-height: 438px;
+            overflow-y: auto;
+            opacity: 0;
+            -webkit-transform: translate3d(0, -5%, 0);
+            transform: translate3d(0, -5%, 0);
+            z-index: 11;
+
+            .notificationHeading {
+                font-family: "Poppins";
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                padding: 15px;
+                margin-bottom: 3px;
+            }
+
+
+            &.visible {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+
+            .empty {
+                transition: all 0.3s ease-in-out;
+                padding: 0px 15px 15px;
+                margin-bottom: 0;
+                cursor: default;
+                color: #869098;
+                font-family: "Inter";
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17px;
+            }
+        }
+
+        .notifyNumber {
+            background: #ff5900;
+            color: white;
+            border-radius: 50%;
+            font-size: 10px;
+            position: absolute;
+            padding: 1px 4px 1px;
+            top: -6px;
+            left: 10px;
+            border: 1px solid white;
+            width: 18px;
+            height: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+@media (min-width:768px) and (max-width:1199px) {
+    .header {
+        .searchDiv {
+            .searchInput {
+                width: 300px;
+            }
+        }
+
+        .iconDiv {
+            width: calc(100% - 245px);
+            justify-content: end;
+        }
+    }
+
+    .welcome {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    .welcome {
+        font-size: 16px;
+        margin-bottom: 15px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .mobileSearch {
+        margin-bottom: 20px;
+    }
+
+    .header {
+        padding: 20px 0 20px;
+        align-items: normal;
+        margin-bottom: 0;
+
+        .logo {
+            margin-left: auto;
+            text-align: center;
+            margin-right: auto;
+
+            img {
+                margin-left: 30px;
+                width: 90px;
+                height: auto;
+            }
+        }
+
+        .searchDiv {
+            .searchIcon {
+                left: 10px;
+            }
+
+            .searchInput {
+                padding: 5px 0 5px 30px;
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        .iconDiv {
+            margin-left: 0;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            row-gap: 10px;
+
+            .settingIcon {
+                margin: 0 15px;
+            }
+        }
+
+        .notify {
+
+            .notificationDropdown {
+                top: 40px;
+                right: 5px;
+                width: 320px;
+
+                .notificationHeading {
+                    padding: 10px;
+                }
+            }
+
+            .notifyNumber {
+                font-size: 9px;
+                padding: 1px 4px 2px;
+                top: -6px;
+                left: 5px;
+                width: 19px;
+            }
+        }
+    }
+
+    .notification {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .notiList {
+        .iconflex {
+            padding: 10px;
+
+            .msgbox {
+                .msgLine {
+                    margin-bottom: 5px;
+                    font-size: 12px;
+
+                    p {
+                        text-align: left;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        max-width: 240px;
+                        overflow: hidden;
+                    }
+                }
+
+                .day {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+}

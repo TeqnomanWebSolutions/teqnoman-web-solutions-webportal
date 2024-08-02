@@ -1,0 +1,59 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.remove {
+    margin-bottom: 20px;
+}
+
+.search {
+    display: flex;
+    padding: 10px 20px;
+    border: 1px solid #E2EAF2;
+    border-radius: 8px;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    margin: 15px 15px 10px;
+
+    .searchTerm {
+        font-family: "Inter";
+        outline: 0;
+        border: none;
+        font-size: 14px;
+        line-height: 0;
+        width: 100%;
+        background-color: transparent;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &::placeholder {
+            color: #9C9C9C;
+            opacity: 1;
+        }
+    }
+}
+
+.list {
+    display: flex;
+
+    p {
+        align-self: center;
+        padding-left: 10px;
+    }
+}
+
+.action {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .delete,
+    .edit {
+        cursor: pointer;
+    }
+}

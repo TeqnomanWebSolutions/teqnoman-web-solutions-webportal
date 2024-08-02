@@ -1,0 +1,184 @@
+.projBox {
+    color: #000;
+    height: 100%;
+
+    .project {
+        border: 1px solid #E2EAF2;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0px 20px 70px 0px #2E3F6A1A;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .leftheading {
+            .heading {
+                font-size: 16px;
+                font-family: 'Inter';
+                font-weight: 500;
+                margin-bottom: 0;
+                line-height: 19.36px;
+                text-transform: capitalize;
+            }
+
+            .department {
+                font-size: 12px;
+                font-family: 'Inter';
+                color: #869098;
+                font-weight: 500;
+                line-height: 15px;
+
+            }
+        }
+
+        .rightheading {
+            .badge {
+                background: rgba(90, 175, 5, 0.1);
+                color: #5AAF05;
+                font-weight: 600;
+                font-family: 'Inter';
+                font-size: 10px;
+                padding: 10px;
+                border-radius: 5px;
+            }
+        }
+
+        .description {
+            font-size: 12px;
+            font-weight: 500;
+            font-family: 'Inter';
+            line-height: 23px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            min-height: 40px;
+        }
+
+        p {
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 200px;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
+
+        .projectdate {
+            display: flex;
+            justify-content: space-between;
+
+            .startDate {
+                p {
+                    font-size: 12px;
+                    font-weight: 500;
+                    font-family: 'Inter';
+                }
+
+                span {
+                    font-size: 12px;
+                    font-family: 'Inter';
+                    color: #869098;
+                }
+
+            }
+
+            .projectmember {
+                display: flex;
+                align-items: center;
+
+                .member {
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                    margin-left: -15px;
+                    object-fit: cover;
+                }
+
+                .more {
+                    background: #E2E2E2;
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                    height: 34px;
+                    color: #15141A;
+                    font-size: 12px;
+                    font-family: Inter;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    margin-left: -15px;
+                    justify-content: center;
+                    width: 34px;
+                }
+
+                .nomembers {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .projBox {
+        .project {
+            padding: 15px;
+
+            .description {
+                margin-bottom: 15px;
+            }
+
+            .head {
+                gap: 10px;
+            }
+
+            .projectdate {
+                flex-wrap: wrap;
+                row-gap: 15px;
+
+                .projectmember {
+                    width: 100%;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .projBox {
+        .project {
+            .description {
+                margin-bottom: 15px;
+            }
+
+            .projectdate {
+                flex-wrap: wrap;
+                row-gap: 15px;
+
+                .projectmember {
+                    width: 100%;
+                    justify-content: right;
+                }
+            }
+        }
+    }
+}
