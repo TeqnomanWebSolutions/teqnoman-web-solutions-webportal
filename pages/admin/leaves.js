@@ -382,8 +382,8 @@ export default function Leaves() {
       <meta name="og:site_name" content="Teqnoman Web Solutions" />
       <meta name="og:locale" content="en_US" />
       <meta name="og:type" content="article" />
-      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.svg" />
-      <link rel="apple-touch-icon-precomposed" href="/images/favicon.svg" />
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+      <link rel="apple-touch-icon-precomposed" href="/images/favicon.png" />
       <meta name="title" property="og:title" content="Employee management system - Teqnoman Web Solutions" />
       <meta name="image" property="og:image" content="https://files.teqnomanweb.com/files/home/portal-meta-image.png" />
       <meta name="author" content="Teqnoman Web Solutions" />

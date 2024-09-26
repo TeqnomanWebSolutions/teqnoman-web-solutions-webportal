@@ -43,9 +43,9 @@ const Notification = ({ module, icon, date, time, message, link }) => {
 };
 
 const demonotification = [
-    { module: "project", msg: "Etereo project has been completed", date: "2023-07-24T08:20:00.000Z" },
-    { module: "holiday", msg: "Admin has added new holiday", date: "2023-08-20T11:30:00.000Z" },
-    { module: "leave", msg: "Your leave has been approved by admin", date: "2023-08-23T00:00:00.000Z" },
+    // { module: "project", msg: "Etereo project has been completed", date: "2023-07-24T08:20:00.000Z" },
+    // { module: "holiday", msg: "Admin has added new holiday", date: "2023-08-20T11:30:00.000Z" },
+    // { module: "leave", msg: "Your leave has been approved by admin", date: "2023-08-23T00:00:00.000Z" },
 ];
 
 const openFileManager = (field = null) => {
@@ -120,7 +120,7 @@ const Header = ({ user }) => {
         {customHeader ? (<>
             <div className={styles.header}>
                 <Link href='/dashboard' className={styles.logo}>
-                    <Image src="/images/logo-dark.png" alt={"logo"} width={103} height={30} />
+                    <Image src="/images/Teqnoman_Logo_With_BG.jpg" alt={"logo"} width={103} height={30} />
                 </Link>
                 <div className={styles.iconDiv}>
                     {user?.role === 'admin' && <ButtonUi text={'File Manager'} cssClass="btnuiRounded" callBack={openFileManager} />}
